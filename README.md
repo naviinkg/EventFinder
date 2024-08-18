@@ -27,7 +27,7 @@ Event Finder is a full-stack web application that allows users to browse, create
 
 ## Home Page
 
-![Home Page](/cs-5610-assignment-03-np/screenshots/HomePage.png)
+![Home Page](/screenshots/HomePage.png)
 
 ## Event Details
 

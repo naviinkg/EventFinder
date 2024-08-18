@@ -1,0 +1,81 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id             Int         @id @default(autoincrement())
+  auth0_id       String      @unique
+  email          String    
+  name           String
+  created_at     DateTime    @default(now())
+  organization   String?
+  favorites      Json? // Use JSON type to store array of strings and integers
+  eventsPosted   Event[]     @relation("PostedEvents")
+  eventsPostedId Json?
+  UserEvent      UserEvent[]
+
+  @@map("users")
+}
+
+model Event {
+  id              String      @id
+  name            String
+  type            String
+  url             String?
+  locale          String?
+  images          Json? // Store JSON array for images
+  description     String? @db.LongText
+  salesStart      DateTime?
+  salesEnd        DateTime?
+  localDate       DateTime?
+  localTime       String?
+  timezone        String?
+  statusCode      String
+  category        String // This will represent the primary segment name
+  venueId         String
+  venue           Venue       @relation("EventVenue", fields: [venueId], references: [id])
+  created_at      DateTime    @default(now())
+  price           Int?
+  no_of_tickets   Int?
+  postedById      String? // Made optional
+  posted_by       User?       @relation("PostedEvents", fields: [postedById], references: [auth0_id])
+  UserEvents      UserEvent[] @relation("EventUserEvents")
+  classifications Json // Store JSON array for classifications
+
+  @@map("events")
+}
+
+model Venue {
+  id         String  @id
+  name       String
+  postalCode String
+  city       String
+  state      String
+  country    String
+  address    String
+  events     Event[] @relation("EventVenue")
+
+  @@map("venues")
+}
+
+model UserEvent {
+  id            Int      @id @default(autoincrement())
+  user_id       String
+  event_id      String
+  status        String
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+  no_of_tickets Int?
+  total_price   Int?
+  user          User     @relation(fields: [user_id], references: [auth0_id])
+  event         Event    @relation("EventUserEvents", fields: [event_id], references: [id])
+
+  @@map("user_events")
+}

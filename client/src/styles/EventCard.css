@@ -1,0 +1,19 @@
+.favorite-button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: background-color 0.2s ease;
+  }
+  
+  .favorite-button:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+  }
+  
+  .favorite-button svg {
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+  }

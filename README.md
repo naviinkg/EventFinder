@@ -39,11 +39,11 @@ Event Finder is a full-stack web application that allows users to browse, create
 
 ## Profile Page
 
-![Profile Page](/screenshots\ProfilePage.jpeg)
+![Profile Page](/screenshots/ProfilePage.jpeg)
 
 ## Login / Signup
 
-![Login/Signup Page](/screenshots\LoginSignup.png)
+![Login/Signup Page](/screenshots/LoginSignup.png)
 
 ## Payment Page
 

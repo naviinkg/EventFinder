@@ -31,28 +31,28 @@ Event Finder is a full-stack web application that allows users to browse, create
 
 ## Event Details
 
-![Event Page](/cs-5610-assignment-03-np/screenshots/EventDetails.jpeg)
+![Event Page](/screenshots/EventDetails.jpeg)
 
 ## Create Event
 
-![Create Event Page](/cs-5610-assignment-03-np/screenshots/CreateEventPage.jpeg)
+![Create Event Page](/screenshots/CreateEventPage.jpeg)
 
 ## Profile Page
 
-![Profile Page](/cs-5610-assignment-03-np\screenshots\ProfilePage.jpeg)
+![Profile Page](/screenshots\ProfilePage.jpeg)
 
 ## Login / Signup
 
-![Login/Signup Page](/cs-5610-assignment-03-np\screenshots\LoginSignup.png)
+![Login/Signup Page](/screenshots\LoginSignup.png)
 
 ## Payment Page
 
-![Payment Page](/cs-5610-assignment-03-np\screenshots/PaymentPage.jpeg)
+![Payment Page](/screenshots/PaymentPage.jpeg)
 
 ## Payment Confirmation
 
-![Payment Confirmation Page](/cs-5610-assignment-03-np\screenshots/PaymentSuccess.jpeg)
+![Payment Confirmation Page](/screenshots/PaymentSuccess.jpeg)
 
 ## Filters
 
-![Filters Page](/cs-5610-assignment-03-np\screenshots/Filters.png)
+![Filters Page](/screenshots/Filters.png)

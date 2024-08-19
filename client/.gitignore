@@ -3,6 +3,7 @@
 .pnp.js
 /coverage
 /build
+.env
 .DS_Store
 npm-debug.log*
 yarn-debug.log*
